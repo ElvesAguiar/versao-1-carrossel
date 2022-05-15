@@ -1,34 +1,132 @@
 *{
+   
     box-sizing: border-box;
 }
+:root{
+    font-size: 62.5%;
+    --heith-carrosel: 20rem ;
+    --width-carrosel: 25rem ;
 
+    --destop-heith-carrosel: 40rem ;
+    --destop-width-carrosel: 50rem ;
+
+}
 body{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin:0;
+    width:100vw;
     min-height: 100vh;
 }
 
-.carrosel{
-    display: flex;
-    flex-direction: row;
-    box-shadow: 2px 2px 4px black;
-    overflow: hidden;
-    height: 100px;
-    width: 100px;
-    
+body button {
+    height: auto;
+    width: 3rem;
 
 }
 
-.container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0);
+h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2.5rem;
+    color:#1C2F5D;
+    padding:2.5rem;
+    align-items: center;
+    text-align:center;
 }
 
 img{
     object-fit: cover;
-    height: 100px;
-    width: 100px;
+    height: var(--heith-carrosel);
+    width: var(--width-carrosel);
+}
+
+/* ===================container1=================== */
+.container1{
+    display: flex;
+    flex-direction: row;
+
+}
+.carrosel{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0.2rem 0.2rem 0.4rem black;
+    overflow: hidden;
+    height: var(--heith-carrosel);
+    width: var(--width-carrosel);
+    
+
+}
+.conteudo0 {
+    display: flex;
+    flex-direction: row;
+}
+.conteudoCarrossel {
+   
+    
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+/*========================conitainer2===================*/
+.container2 {
+    display: flex;
+    flex-direction:column;
+}
+.conteudo2 {
+    margin: 0%;
+    padding: 0 5rem 0 5rem;
+    flex-direction: row;
+    justify-items:center;
+    align-items: center;
+}
+
+.redesSociais{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; 
+}
+.redesSociais .sympla {
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color:#1C2F5D;
+    font-weight: 700;
+
+}
+.redesSociais .sympla:hover {
+    background-color:#294079 ;
+    color: #fff ;
+    padding: 1rem;
+    border-radius: 5rem;
+    transition: 0.2s;
+}
+
+.redesSociais img{
+    width: 5rem;
+    height: 5rem;
+}
+
+@media screen and (min-width:768px) {
+   
+    .carrosel{
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0.2rem 0.2rem 0.4rem black;
+        overflow: hidden;
+        height: var(--destop-heith-carrosel);
+        width: var(--destop-width-carrosel);
+        
+    
+    }
+
+    img{
+        object-fit: cover;
+        height: var(--destop-heith-carrosel);
+        width: var(--destop-width-carrosel);
+    }
 }
