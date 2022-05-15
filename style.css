@@ -52,8 +52,8 @@ img{
     display: flex;
     flex-direction: row;
     box-shadow: 0.2rem 0.2rem 0.4rem black;
-    overflow: hidden;
-    height: var(--heith-carrosel);
+    overflow: hidden; 
+    height: calc(+var(--destop-heith-carrosel)+12rem);
     width: var(--width-carrosel);
     
 
@@ -69,6 +69,60 @@ img{
     justify-content: center;
     transition: transform 0.5s ease-in-out;
     transform: translateX(0);
+}
+.conteudoCarrossel div {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+.conteudoCarrossel h3 {
+    font-size: 2.5rem;
+    font-family: 'PT Sans', sans-serif;
+}
+.conteudoCarrossel a{
+    color: #294079;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 0.2rem solid #294079;
+    border-radius: 2.5rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+}
+.conteudoCarrossel button {
+    height: auto;
+    width: auto;
+
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+ul li {
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none; 
+    color:#1C2F5D ;
+    font-weight: 700;
+    
+}
+
+ul li+li {
+    margin-left:1rem; 
 }
 
 /*========================conitainer2===================*/
@@ -111,6 +165,8 @@ img{
     height: 5rem;
 }
 
+
+
 @media screen and (min-width:768px) {
    
     .carrosel{
@@ -118,7 +174,7 @@ img{
         flex-direction: row;
         box-shadow: 0.2rem 0.2rem 0.4rem black;
         overflow: hidden;
-        height: var(--destop-heith-carrosel);
+        height: calc(+var(--destop-heith-carrosel));
         width: var(--destop-width-carrosel);
         
     
@@ -129,4 +185,19 @@ img{
         height: var(--destop-heith-carrosel);
         width: var(--destop-width-carrosel);
     }
+
+    ul li {
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        text-decoration: none; 
+        
+    }
+    
+    ul li+li {
+        margin-left:2rem; 
+    }
+
+    
 }
