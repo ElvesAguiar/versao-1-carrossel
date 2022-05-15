@@ -11,7 +11,6 @@ let idx=0;
 
 botaoDireto.addEventListener('click', () =>{
     idx++;
-    console.log(imgs.clientWidth)
     
     if (imgs.clientWidth==2000){
         carrosel=false;
@@ -61,3 +60,30 @@ botaoEsquerdo.addEventListener('click', () =>{
         imgs.style.transform = `translateX(${(-idx*50)}rem)`;
     }
 })
+
+function functionCarrosel(){
+ 
+    idx++;
+    
+    if (imgs.clientWidth==2000){
+        carrosel=false;
+    }else{
+        carrosel=true; 
+    }
+
+    if (carrosel==true){
+   
+        if(idx > img.length-1){
+            idx=0;
+        }
+        imgs.style.transform =  `translateX(${(-idx*25)}rem)`;
+    }else{
+        if(idx > img.length-1){
+            idx=0;
+        }
+        imgs.style.transform =  `translateX(${(-idx*50)}rem)`;
+    }
+
+}
+
+setInterval(functionCarrosel,5000)
