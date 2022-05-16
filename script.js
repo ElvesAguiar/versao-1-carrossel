@@ -4,15 +4,17 @@ const botaoDireto = document.getElementById('botaoDireito');
 const botaoEsquerdo = document.getElementById('botaoEsquerdo');
 
 let carrosel =true;
-
+let widthCarrosel=20;
+let widthCarroselLarge=70;
 
 let idx=0;
 
 
 botaoDireto.addEventListener('click', () =>{
     idx++;
-    
-    if (imgs.clientWidth==2000){
+    console.log(imgs.clientWidth);
+    console.log(idx);
+    if (imgs.clientWidth==2800){
         carrosel=false;
     }else{
         carrosel=true; 
@@ -23,12 +25,12 @@ botaoDireto.addEventListener('click', () =>{
         if(idx > img.length-1){
             idx=0;
         }
-        imgs.style.transform =  `translateX(${(-idx*25)}rem)`;
+        imgs.style.transform =  `translateX(${(-idx*widthCarrosel)}rem)`;
     }else{
         if(idx > img.length-1){
             idx=0;
         }
-        imgs.style.transform =  `translateX(${(-idx*50)}rem)`;
+        imgs.style.transform =  `translateX(${(-idx*widthCarroselLarge)}rem)`;
     }
 })
 
@@ -36,9 +38,8 @@ botaoDireto.addEventListener('click', () =>{
 botaoEsquerdo.addEventListener('click', () =>{
    
     idx--;
-    console.log(idx);
     
-    if (imgs.clientWidth==2000){
+    if (imgs.clientWidth==2800){
         carrosel=false;
     }else{
         carrosel=true; 
@@ -51,20 +52,20 @@ botaoEsquerdo.addEventListener('click', () =>{
             idx=img.length-1;
         }
     
-        imgs.style.transform = `translateX(${(-idx*25)}rem)`;
+        imgs.style.transform = `translateX(${(-idx*widthCarrosel)}rem)`;
     }else{
         if(idx ==-1 ){
             idx=img.length-1;
         }
     
-        imgs.style.transform = `translateX(${(-idx*50)}rem)`;
+        imgs.style.transform = `translateX(${(-idx*widthCarroselLarge)}rem)`;
     }
 })
 
 function functionCarrosel(){
  
     idx++;
-    if (imgs.clientWidth==2000){
+    if (imgs.clientWidth==2800){
         carrosel=false;
     }else{
         carrosel=true; 
@@ -75,13 +76,13 @@ function functionCarrosel(){
         if(idx > img.length-1){
             idx=0;
         }
-        imgs.style.transform =  `translateX(${(-idx*25)}rem)`;
+        imgs.style.transform =  `translateX(${(-idx*widthCarrosel)}rem)`;
     }else{
         if(idx > img.length-1){
             idx=0;
         }
-        imgs.style.transform =  `translateX(${(-idx*50)}rem)`;
+        imgs.style.transform =  `translateX(${(-idx*widthCarroselLarge)}rem)`;
     }
 }
 
-setInterval(functionCarrosel,5000)
+setInterval(functionCarrosel,10000)
