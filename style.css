@@ -7,8 +7,8 @@
     --heith-carrosel: 20rem ;
     --width-carrosel: 20rem ;
 
-    --destop-heith-carrosel: 40rem ;
-    --destop-width-carrosel: 70rem ;
+    --destop-heith-carrosel: 25rem ;
+    --destop-width-carrosel: 50rem ;
     list-style: none;
 }
 body{
@@ -205,7 +205,7 @@ ul li+li {
         flex-direction: row;
         box-shadow: 0.2rem 0.2rem 0.4rem black;
         overflow: hidden;
-        height: calc(+var(--destop-heith-carrosel));
+        height: 100%;
         width: var(--destop-width-carrosel);
         
     
@@ -213,7 +213,7 @@ ul li+li {
 
     img{
         object-fit: cover;
-        height: var(--destop-heith-carrosel);
+        height:90%;
         width: var(--destop-width-carrosel);
     }
 
